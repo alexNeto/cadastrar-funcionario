@@ -80,8 +80,8 @@ public class SQLiteJDBC{
 	    System.out.println("Operation done successfully");
 	    return id;
 	  }
-	public static void atualizaDB(int id, String nome, String email, Cargos cargo, String senha)
-	  {
+	
+	public static void atualizaDB(int id, String nome, String email, Cargos cargo, String senha){
 	    Connection c = null;
 	    Statement stmt = null;
 	    try {
@@ -91,26 +91,15 @@ public class SQLiteJDBC{
 	      System.out.println("Opened database successfully");
 
 	      stmt = c.createStatement();
-	      String sql = "UPDATE COMPANY set SALARY = 25000.00 where ID=1;";
+	      
+	      String sql = "UPDATE FUNCIONARIO SET NOME = "+ nome +
+	    		  ", EMAIL = " + email +
+	    		  ", CARGO = " + cargo + 
+	    		  ", SENHA = " + senha +
+	    		  " where ID =" + id + ";";
+	      
 	      stmt.executeUpdate(sql);
 	      c.commit();
-
-	      ResultSet rs = stmt.executeQuery( "SELECT * FROM COMPANY;" );
-	      while ( rs.next() ) {
-	         int id = rs.getInt("id");
-	         String  name = rs.getString("name");
-	         int age  = rs.getInt("age");
-	         String  address = rs.getString("address");
-	         float salary = rs.getFloat("salary");
-	         System.out.println( "ID = " + id );
-	         System.out.println( "NAME = " + name );
-	         System.out.println( "AGE = " + age );
-	         System.out.println( "ADDRESS = " + address );
-	         System.out.println( "SALARY = " + salary );
-	         System.out.println();
-	      }
-	      rs.close();
-	      stmt.close();
 	      c.close();
 	    	} catch ( Exception e ) {
 	      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
@@ -118,6 +107,47 @@ public class SQLiteJDBC{
 	    }
 	    System.out.println("Operation done successfully");
 	  }
-	}
+
+	public static ResultSet consultarDados(boolean imprimir){
+		
+	    Connection c = null;
+	    Statement stmt = null;
+	    try {
+	      Class.forName("org.sqlite.JDBC");
+	      c = DriverManager.getConnection("jdbc:sqlite:funcionario.db");
+	      c.setAutoCommit(false);
+	      System.out.println("Opened database successfully");
+
+	      stmt = c.createStatement();
+	      ResultSet rs = stmt.executeQuery( "SELECT * FROM FUNCIONARIO WHERE NOME = " + procura +
+	    		  " OR  EMAIL = " + procura +";" );
+	      if(imprimir){
+	      while ( rs.next() ) {
+	    	  int id = rs.getInt("ID");
+	    	  String nome = rs.getString("NOME");
+	    	  String email  = rs.getString("EMAIL");
+	    	  String cargo = rs.getString("CARGO");
+	    	  String senha = rs.getString("SENHA");
+	    	  
+	    	  
+	    	  System.out.println( "ID = " + id );
+	    	  System.out.println( "NAME = " + nome );
+	    	  System.out.println( "AGE = " + email );
+	    	  System.out.println( "ADDRESS = " + cargo );
+	    	  System.out.println();
+	      	}
+	      }
+	      else
+	    	  return rs;
+	      rs.close();
+	      stmt.close();
+	      c.close();
+	    } catch ( Exception e ) {
+	      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+	      System.exit(0);
+	    }
+	    System.out.println("Operation done successfully");
+		return null;
+	  }
+}
 	
-	}

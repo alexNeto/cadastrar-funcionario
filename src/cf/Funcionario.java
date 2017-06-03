@@ -1,5 +1,8 @@
 package cf;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import javax.swing.JOptionPane;
 
 public class Funcionario extends Usuario {
@@ -20,7 +23,16 @@ public class Funcionario extends Usuario {
 		return null;
 	}
 
-	public String modificarFuncionario() {
+	public static String modificarFuncionario() throws SQLException {
+			
+		String procura = (String)JOptionPane.showInputDialog(
+                null,
+                "Digite o nome ou email:\n"
+                + "do funcionário desejado",
+                "Customized Dialog",
+                JOptionPane.PLAIN_MESSAGE,
+                null,
+                null, "");
 		
 		return null;
 	}

@@ -1,11 +1,14 @@
 package cf;
 
+import java.sql.SQLException;
+
 public class TelaCadastro {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		//SQLiteJDBC.iniciaDB();
 		SQLiteJDBC.criaTabela();
-		Funcionario.adicionarFuncionario();
+		//Funcionario.adicionarFuncionario();
+		Funcionario.modificarFuncionario();
 	}
 	
 	

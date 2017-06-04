@@ -16,8 +16,8 @@ public class Usuario {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public static void setId(int id) {
+		Usuario.id = id;
 	}
 
 	public static String getNome() {
@@ -25,7 +25,7 @@ public class Usuario {
 	}
 
 	public void setNome(String nome) {
-		this.nome = nome;
+		Usuario.nome = nome;
 	}
 
 	public static String getEmail() {
@@ -33,7 +33,7 @@ public class Usuario {
 	}
 
 	public void setEmail(String email) {
-		this.email = email;
+		Usuario.email = email;
 	}
 
 	public static Cargos getCargo() {
@@ -41,7 +41,7 @@ public class Usuario {
 	}
 
 	public void setCargo(Cargos cargo) {
-		this.cargo = cargo;
+		Usuario.cargo = cargo;
 	}
 
 	public static String getSenha() {
@@ -49,7 +49,7 @@ public class Usuario {
 	}
 
 	public void setSenha(String senha) {
-		this.senha = senha;
+		Usuario.senha = senha;
 	}
 
 	

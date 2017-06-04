@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+import javax.swing.JOptionPane;
+
 public class SQLiteJDBC{
 
 	public static void criaTabela(){
@@ -86,7 +88,7 @@ public class SQLiteJDBC{
 	    Statement stmt = null;
 	    try {
 	      Class.forName("org.sqlite.JDBC");
-	      c = DriverManager.getConnection("jdbc:sqlite:test.db");
+	      c = DriverManager.getConnection("jdbc:sqlite:funcionario.db");
 	      c.setAutoCommit(false);
 	      System.out.println("Opened database successfully");
 
@@ -108,10 +110,11 @@ public class SQLiteJDBC{
 	    System.out.println("Operation done successfully");
 	  }
 
-	public static ResultSet consultarDados(boolean imprimir){
+	public static int consultarDados(boolean imprimir, String procura){
 		
 	    Connection c = null;
 	    Statement stmt = null;
+	    int id = 0;
 	    try {
 	      Class.forName("org.sqlite.JDBC");
 	      c = DriverManager.getConnection("jdbc:sqlite:funcionario.db");
@@ -119,26 +122,22 @@ public class SQLiteJDBC{
 	      System.out.println("Opened database successfully");
 
 	      stmt = c.createStatement();
-	      ResultSet rs = stmt.executeQuery( "SELECT * FROM FUNCIONARIO WHERE NOME = " + procura +
-	    		  " OR  EMAIL = " + procura +";" );
+	      ResultSet rs = stmt.executeQuery( "SELECT * FROM FUNCIONARIO WHERE NOME LIKE '%" + procura + "%';" );
 	      if(imprimir){
 	      while ( rs.next() ) {
-	    	  int id = rs.getInt("ID");
+	    	  id = rs.getInt("ID");
 	    	  String nome = rs.getString("NOME");
 	    	  String email  = rs.getString("EMAIL");
 	    	  String cargo = rs.getString("CARGO");
-	    	  String senha = rs.getString("SENHA");
-	    	  
-	    	  
-	    	  System.out.println( "ID = " + id );
-	    	  System.out.println( "NAME = " + nome );
-	    	  System.out.println( "AGE = " + email );
-	    	  System.out.println( "ADDRESS = " + cargo );
-	    	  System.out.println();
+	    	  //String senha = rs.getString("SENHA");
+	    	  JOptionPane.showMessageDialog(null, "ID: " + id +
+	  					"\nNOME: " + nome +
+	  					"\nEMAIL: " + email +
+	  					"\nCARGO: " + cargo);
 	      	}
 	      }
 	      else
-	    	  return rs;
+	    	  return id;
 	      rs.close();
 	      stmt.close();
 	      c.close();
@@ -147,7 +146,28 @@ public class SQLiteJDBC{
 	      System.exit(0);
 	    }
 	    System.out.println("Operation done successfully");
-		return null;
+		return 0;
 	  }
+
+	public static void deletaDados(int id){
+		Connection c = null;
+	    Statement stmt = null;
+	    try {
+	      Class.forName("org.sqlite.JDBC");
+	      c = DriverManager.getConnection("jdbc:sqlite:test.db");
+	      c.setAutoCommit(false);
+	      System.out.println("Opened database successfully");
+
+	      stmt = c.createStatement();
+	      String sql = "DELETE from COMPANY where ID =" + id + ";";
+	      stmt.executeUpdate(sql);
+	      c.commit();
+	      c.close();
+	    } catch ( Exception e ) {
+	        System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+	        System.exit(0);
+	      }
+	}
 }
+
 	

@@ -6,9 +6,11 @@ public class TelaCadastro {
 
 	public static void main(String[] args) throws SQLException {
 		//SQLiteJDBC.iniciaDB();
-		SQLiteJDBC.criaTabela();
+		//SQLiteJDBC.criaTabela();
 		//Funcionario.adicionarFuncionario();
-		Funcionario.modificarFuncionario();
+		//Funcionario.modificarFuncionario();
+		//Funcionario.consultaFuncionario(true);
+		//Funcionario.modificarFuncionario();
 	}
 	
 	

@@ -39,7 +39,7 @@ public class Funcionario extends Usuario {
 		return null;
 	}
 
-	public String excluiFuncionario() {
+	public static String excluiFuncionario() {
 		setId(consultaFuncionario(false));
 		SQLiteJDBC.deletaDados(getId());
 		return null;

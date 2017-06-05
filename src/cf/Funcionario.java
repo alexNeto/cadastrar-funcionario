@@ -24,7 +24,7 @@ public class Funcionario extends Usuario {
 
 	public static String modificarFuncionario() throws SQLException {
 		Usuario user = new Usuario();
-		setId(consultaFuncionario(false));
+		Usuario.setId(consultaFuncionario(false));
 		user.setNome(JOptionPane.showInputDialog("Digite o nome do funcionário:"));
 		user.setEmail(JOptionPane.showInputDialog("Digite o e-mail do funcionário:"));
 		Object[] itens = { Cargos.GERENTE, Cargos.TECNICO, Cargos.CLIENTE };

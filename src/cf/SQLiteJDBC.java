@@ -84,7 +84,9 @@ public class SQLiteJDBC{
 	  }
 	
 	public static void atualizaDB(int id, String nome, String email, Cargos cargo, String senha){
-	    Connection c = null;
+		
+		
+		Connection c = null;
 	    Statement stmt = null;
 	    try {
 	      Class.forName("org.sqlite.JDBC");
@@ -93,17 +95,17 @@ public class SQLiteJDBC{
 	      System.out.println("Opened database successfully");
 
 	      stmt = c.createStatement();
-	      
-	      String sql = "UPDATE FUNCIONARIO SET NOME = "+ nome +
-	    		  ", EMAIL = " + email +
-	    		  ", CARGO = " + cargo + 
-	    		  ", SENHA = " + senha +
-	    		  " where ID =" + id + ";";
-	      
+	      String sql = "update FUNCIONARIO set " + 
+	      " NOME = '%" + nome + 
+	      "%', EMAIL = '%" + email + 
+	      "%', CARGO = '%" + cargo + 
+	      "%', SENHA = '%" + senha + 
+	      "%' where ID = " + id + ";";
 	      stmt.executeUpdate(sql);
 	      c.commit();
+	      stmt.close();
 	      c.close();
-	    	} catch ( Exception e ) {
+	    } catch ( Exception e ) {
 	      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
 	      System.exit(0);
 	    }
@@ -123,24 +125,24 @@ public class SQLiteJDBC{
 
 	      stmt = c.createStatement();
 	      ResultSet rs = stmt.executeQuery( "SELECT * FROM FUNCIONARIO WHERE NOME LIKE '%" + procura + "%';" );
+	      id = rs.getInt("ID");
 	      if(imprimir){
-	      while ( rs.next() ) {
-	    	  id = rs.getInt("ID");
-	    	  String nome = rs.getString("NOME");
-	    	  String email  = rs.getString("EMAIL");
-	    	  String cargo = rs.getString("CARGO");
-	    	  //String senha = rs.getString("SENHA");
-	    	  JOptionPane.showMessageDialog(null, "ID: " + id +
+	    	  while ( rs.next() ) {
+	    		  String nome = rs.getString("NOME");
+	    		  String email  = rs.getString("EMAIL");
+	    		  String cargo = rs.getString("CARGO");
+	    		  //String senha = rs.getString("SENHA");
+	    		  JOptionPane.showMessageDialog(null, "ID: " + id +
 	  					"\nNOME: " + nome +
 	  					"\nEMAIL: " + email +
 	  					"\nCARGO: " + cargo);
 	      	}
 	      }
-	      else
-	    	  return id;
+	      
 	      rs.close();
 	      stmt.close();
 	      c.close();
+	      return id;
 	    } catch ( Exception e ) {
 	      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
 	      System.exit(0);
@@ -159,7 +161,7 @@ public class SQLiteJDBC{
 	      System.out.println("Opened database successfully");
 
 	      stmt = c.createStatement();
-	      String sql = "DELETE from COMPANY where ID =" + id + ";";
+	      String sql = "DELETE from FUNCIONARIO where ID =" + id + ";";
 	      stmt.executeUpdate(sql);
 	      c.commit();
 	      c.close();

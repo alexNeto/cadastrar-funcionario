@@ -49,7 +49,7 @@ public class Funcionario extends Usuario {
 		
 		String procura = (String)JOptionPane.showInputDialog(
                 null,
-                "Digite o nome ou email:\n"
+                "Digite o nome\n"
                 + "do funcionário desejado",
                 "Customized Dialog",
                 JOptionPane.PLAIN_MESSAGE,

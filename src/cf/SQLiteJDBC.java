@@ -1,9 +1,6 @@
 package cf;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 
 import javax.swing.JOptionPane;
 
@@ -95,12 +92,15 @@ public class SQLiteJDBC{
 	      System.out.println("Opened database successfully");
 
 	      stmt = c.createStatement();
+	      
+	      
 	      String sql = "update FUNCIONARIO set " + 
-	      " NOME = '%" + nome + 
+	      " NOME = '%" + nome +
 	      "%', EMAIL = '%" + email + 
 	      "%', CARGO = '%" + cargo + 
 	      "%', SENHA = '%" + senha + 
-	      "%' where ID = " + id + ";";
+	      "%' where ID = " + id;
+	      
 	      stmt.executeUpdate(sql);
 	      c.commit();
 	      stmt.close();
@@ -111,6 +111,7 @@ public class SQLiteJDBC{
 	    }
 	    System.out.println("Operation done successfully");
 	  }
+	  
 
 	public static int consultarDados(boolean imprimir, String procura){
 		

@@ -157,12 +157,12 @@ public class SQLiteJDBC{
 	    Statement stmt = null;
 	    try {
 	      Class.forName("org.sqlite.JDBC");
-	      c = DriverManager.getConnection("jdbc:sqlite:test.db");
+	      c = DriverManager.getConnection("jdbc:sqlite:funcionario.db");
 	      c.setAutoCommit(false);
 	      System.out.println("Opened database successfully");
 
 	      stmt = c.createStatement();
-	      String sql = "DELETE from FUNCIONARIO where ID =" + id + ";";
+	      String sql = "DELETE FROM FUNCIONARIO WHERE ID = " + id + ";";
 	      stmt.executeUpdate(sql);
 	      c.commit();
 	      c.close();

@@ -1,2 +1,2 @@
 # cadastrarFuncionario
-## Feito como parte da matéria de Engenharia de Software 
+Auxiliar de gerenciamento de funcionários para microempresas. Criado com intenção de aplicar os conhecimentos em java a medida em que é adquirida

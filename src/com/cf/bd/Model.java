@@ -1,12 +1,12 @@
 package com.cf.bd;
 
-import java.sql.Connection;
-import java.sql.Statement;
+
+import com.cf.bd.crud.Create;
 
 
 public class Model {
 
 	public void criaTabela() {
-
-		
+		Create.criaFuncionarios();
+	}
 }

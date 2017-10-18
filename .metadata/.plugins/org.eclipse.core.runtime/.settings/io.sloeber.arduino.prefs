@@ -1,0 +1,4 @@
+Automatically\ import\ libraries=true
+Private\ Library\ Path=/home/grad/Arduino/libraries
+Private\ hardware\ Path=/home/grad/Arduino/hardware
+eclipse.preferences.version=1

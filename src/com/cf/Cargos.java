@@ -1,4 +1,4 @@
-package cf;
+package com.cf;
 
 public enum Cargos {
 

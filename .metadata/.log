@@ -1,0 +1,88 @@
+!SESSION 2017-10-18 14:49:02.932 -----------------------------------------------
+eclipse.buildId=4.7.1.v20170915-1447
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.update.configurator 4 0 2017-10-18 14:49:26.145
+!MESSAGE Unable to access file "plugins/org.easymock_3.4.0.jar!META-INF/MANIFEST.MF".
+
+!ENTRY org.eclipse.update.configurator 4 0 2017-10-18 14:49:26.337
+!MESSAGE Unable to access file "plugins/org.hamcrest.integration_1.3.0.v20090501071000.jar!META-INF/MANIFEST.MF".
+
+!ENTRY org.eclipse.update.configurator 4 0 2017-10-18 14:49:26.337
+!MESSAGE Unable to access file "plugins/org.objenesis_2.1.0.jar!META-INF/MANIFEST.MF".
+
+!ENTRY org.eclipse.update.configurator 4 0 2017-10-18 14:49:26.572
+!MESSAGE Unable to access file "plugins/org.easymock_3.4.0.jar!META-INF/MANIFEST.MF".
+
+!ENTRY org.eclipse.update.configurator 4 0 2017-10-18 14:49:26.577
+!MESSAGE Unable to access file "plugins/org.hamcrest.integration_1.3.0.v20090501071000.jar!META-INF/MANIFEST.MF".
+
+!ENTRY org.eclipse.update.configurator 4 0 2017-10-18 14:49:26.577
+!MESSAGE Unable to access file "plugins/org.objenesis_2.1.0.jar!META-INF/MANIFEST.MF".
+
+!ENTRY org.eclipse.update.configurator 4 0 2017-10-18 14:49:26.629
+!MESSAGE Unable to access file "plugins/javax.annotation-api_1.2.0.jar!META-INF/MANIFEST.MF".
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2017-10-18 15:23:14.972
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2017-10-18 15:23:14.972
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2017-10-18 15:23:14.973
+!MESSAGE "Gson: Google Json Library for Java" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2017-10-18 15:23:14.973
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2017-10-18 15:23:14.973
+!MESSAGE Software being installed: C/C++ GDB Hardware Debugging Developer Resources 9.3.0.201707130901 (org.eclipse.cdt.debug.gdbjtag.source.feature.group 9.3.0.201707130901)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2017-10-18 15:23:14.973
+!MESSAGE Missing requirement: C/C++ GDB Hardware Debugging Developer Resources 9.3.0.201707130901 (org.eclipse.cdt.debug.gdbjtag.source.feature.group 9.3.0.201707130901) requires 'org.eclipse.cdt.debug.gdbjtag.core.source [9.1.0.201707130901]' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2017-10-18 15:23:15.069
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2017-10-18 15:23:15.069
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2017-10-18 15:23:15.069
+!MESSAGE "Gson: Google Json Library for Java" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2017-10-18 15:23:15.069
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2017-10-18 15:23:15.069
+!MESSAGE Software being installed: C/C++ GDB Hardware Debugging Developer Resources 9.3.0.201707130901 (org.eclipse.cdt.debug.gdbjtag.source.feature.group 9.3.0.201707130901)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2017-10-18 15:23:15.069
+!MESSAGE Missing requirement: C/C++ GDB Hardware Debugging Developer Resources 9.3.0.201707130901 (org.eclipse.cdt.debug.gdbjtag.source.feature.group 9.3.0.201707130901) requires 'org.eclipse.cdt.debug.gdbjtag.core.source [9.1.0.201707130901]' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2017-10-18 15:23:15.170
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2017-10-18 15:23:15.170
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2017-10-18 15:23:15.170
+!MESSAGE "Gson: Google Json Library for Java" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2017-10-18 15:23:15.170
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2017-10-18 15:23:15.170
+!MESSAGE Software being installed: C/C++ GDB Hardware Debugging Developer Resources 9.3.0.201707130901 (org.eclipse.cdt.debug.gdbjtag.source.feature.group 9.3.0.201707130901)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2017-10-18 15:23:15.170
+!MESSAGE Missing requirement: C/C++ GDB Hardware Debugging Developer Resources 9.3.0.201707130901 (org.eclipse.cdt.debug.gdbjtag.source.feature.group 9.3.0.201707130901) requires 'org.eclipse.cdt.debug.gdbjtag.core.source [9.1.0.201707130901]' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2017-10-18 15:23:15.170
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2017-10-18 15:23:15.170
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2017-10-18 15:23:15.171
+!MESSAGE "Gson: Google Json Library for Java" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2017-10-18 15:23:15.171
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2017-10-18 15:23:15.171
+!MESSAGE Software being installed: C/C++ GDB Hardware Debugging Developer Resources 9.3.0.201707130901 (org.eclipse.cdt.debug.gdbjtag.source.feature.group 9.3.0.201707130901)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2017-10-18 15:23:15.171
+!MESSAGE Missing requirement: C/C++ GDB Hardware Debugging Developer Resources 9.3.0.201707130901 (org.eclipse.cdt.debug.gdbjtag.source.feature.group 9.3.0.201707130901) requires 'org.eclipse.cdt.debug.gdbjtag.core.source [9.1.0.201707130901]' but it could not be found
+!SESSION 2017-10-18 15:55:59.440 -----------------------------------------------
+eclipse.buildId=4.7.1.v20170915-1447
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY io.sloeber.core 4 0 2017-10-18 15:57:33.892
+!MESSAGE The plugin Needs write access to /usr/lib/eclipse/arduinoPlugin

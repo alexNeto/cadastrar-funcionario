@@ -1,8 +1,10 @@
-package cf;
+package com.cf;
 
 import java.sql.SQLException;
 
 import javax.swing.JOptionPane;
+
+import com.cf.bd.SQLiteJDBC;
 
 public class Funcionario extends Usuario {
 

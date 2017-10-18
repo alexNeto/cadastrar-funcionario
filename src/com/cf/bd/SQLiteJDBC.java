@@ -1,8 +1,10 @@
-package cf;
+package com.cf.bd;
 
 import java.sql.*;
 
 import javax.swing.JOptionPane;
+
+import com.cf.Cargos;
 
 public class SQLiteJDBC{
 

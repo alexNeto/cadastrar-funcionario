@@ -2,9 +2,10 @@ package com.cf.bd.crud;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.sql.Statement;
 
-import com.cf.Funcionario;
+import com.cf.Usuario;
 import com.cf.bd.Control;
 
 public class Create {
@@ -29,18 +30,20 @@ public class Create {
 		System.out.println("Table created successfully");
 	}
 
-	public void adicionaFuncionario(Funcionario funcionario) {
+	public void adicionaFuncionario(Usuario funcionario) {
 
 		try (Connection conexao = new Control().getConexao()) {
 			String sql = "insert into funcionario" + " (nome, email, cargo, senha)" + " values (?,?,?,?)";
 			PreparedStatement stmt = conexao.prepareStatement(sql);
-
+			
 			stmt.setString(1, funcionario.getNome());
 			stmt.setString(2, funcionario.getEmail());
 			stmt.setString(3, funcionario.getCargo());
 			stmt.setString(4, funcionario.getSenha());
 
 			stmt.execute();
+		} catch(SQLException e) {
+			e.printStackTrace();
 		}
 	}
 
